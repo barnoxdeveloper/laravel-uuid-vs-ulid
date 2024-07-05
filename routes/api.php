@@ -21,3 +21,4 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/products', [ProductController::class, 'index'])->name('api-product');
+Route::get('query/products', [ProductController::class, 'queryBuilder']);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API\V1;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class ProductController extends Controller
@@ -15,6 +16,13 @@ class ProductController extends Controller
     {
         // $products = Product::paginate(10);
         $products = Product::all();
+        return response()->json($products);
+    }
+
+    public function queryBuilder()
+    {
+        // $products = Product::paginate(10);
+        $products = DB::table('products')->get();
         return response()->json($products);
     }
 
