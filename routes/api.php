@@ -20,4 +20,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-// Route::get('/api-product', [ProductController::class, 'index'])->name('api-product')->middleware(['auth', 'verified']);
+Route::get('/api-product', [ProductController::class, 'index'])->name('api-product')->middleware(['auth', 'verified']);
